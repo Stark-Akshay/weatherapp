@@ -48,9 +48,7 @@ export default function Home() {
         setLoading(false);
       });
     searchImage();
-    if (document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
+
   };
 
   return (
