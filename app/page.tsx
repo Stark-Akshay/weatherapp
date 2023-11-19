@@ -28,6 +28,7 @@ export default function Home() {
 
     setKeyword('');
       setCity('');
+
   }
 
   const fetchWeather = (e: FormEvent) => {
@@ -47,8 +48,9 @@ export default function Home() {
         setLoading(false);
       });
     searchImage();
-    
-
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
   };
 
   return (
